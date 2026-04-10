@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --bg-color: #f7f9fc;
+  --panel-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #94a3b8;
+
+  /* Pastel Palette */
+  --pastel-blue: #dbeafe;
+  --pastel-blue-dark: #bfdbfe;
+  --pastel-pink: #fce7f3;
+  --pastel-pink-dark: #fbcfe8;
+  --pastel-mint: #d1fae5;
+  --pastel-mint-dark: #a7f3d0;
+  --pastel-purple: #ede9fe;
+  --pastel-purple-dark: #ddd6fe;
+
+  /* Highlights */
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --bg-color: #0f172a;
+  --panel-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+
+  --pastel-blue: #1e3a8a;
+  --pastel-blue-dark: #3b82f6;
+  --pastel-pink: #831843;
+  --pastel-pink-dark: #ec4899;
+  --pastel-mint: #064e3b;
+  --pastel-mint-dark: #10b981;
+  --pastel-purple: #312e81;
+  --pastel-purple-dark: #6366f1;
+
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+}
+
+/* Base styles for dark theme cards */
+body.dark-theme .card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #334155;
+}
+
+body.dark-theme .sidebar {
+  border-right: 1px solid #334155;
+}
+
+body.dark-theme .settings-header,
+body.dark-theme .setting-toggle-row,
+body.dark-theme .status-item,
+body.dark-theme .settings-list li {
+  border-bottom: 1px solid #334155;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+  color: #1e293b;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Base utility classes for layouts */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--panel-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}

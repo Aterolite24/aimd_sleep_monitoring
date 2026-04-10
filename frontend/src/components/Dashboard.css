@@ -1,0 +1,159 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mt-6 {
+    margin-top: 24px;
+}
+
+.top-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.score-ring {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
+}
+
+.score-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.score-ring .bg-circle {
+    fill: none;
+    stroke: #f1f5f9;
+    stroke-width: 8;
+}
+
+.score-ring .progress-circle {
+    fill: none;
+    stroke: var(--accent-purple);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 1s ease-out;
+}
+
+.score-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.score-value .number {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Outfit';
+    color: #1e293b;
+    line-height: 1;
+}
+
+.score-value .label {
+    font-size: 13px;
+    color: var(--accent-purple);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.score-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.env-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info h4 {
+    font-size: 14px;
+    font-family: 'Inter';
+    color: var(--text-main);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.stat-info p {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Outfit';
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: #1e293b;
+}
+
+.stat-info .trend {
+    font-size: 12px;
+    font-family: 'Inter';
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legend {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
