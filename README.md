@@ -1,5 +1,7 @@
 # aimd_sleep_monitoring
 
-<img width="1860" height="926" alt="Screenshot from 2026-04-10 14-27-31" src="https://github.com/user-attachments/assets/142a5aed-0b42-458f-890d-8e317af51873" />
-<img width="1860" height="926" alt="Screenshot from 2026-04-10 14-27-25" src="https://github.com/user-attachments/assets/f24b89ce-3296-4a12-851f-df5a57cf8338" />
-<img width="1860" height="926" alt="Screenshot from 2026-04-10 14-27-31" src="https://github.com/user-attachments/assets/31bd11a8-f4a9-44fb-ad7d-080e32e61d0c" />
+<img width="1856" height="924" alt="Screenshot from 2026-04-10 15-06-02" src="https://github.com/user-attachments/assets/6051e057-d4ba-4114-be2d-13c4ac3a81e1" />
+<img width="1856" height="924" alt="Screenshot from 2026-04-10 15-06-11" src="https://github.com/user-attachments/assets/da1bf0db-0321-4262-813b-8747d696cdb6" />
+<img width="1856" height="924" alt="Screenshot from 2026-04-10 15-06-16" src="https://github.com/user-attachments/assets/37117eea-509d-4996-83cb-e23b6565f08e" />
+<img width="1856" height="924" alt="Screenshot from 2026-04-10 15-06-21" src="https://github.com/user-attachments/assets/bd43835a-a6c6-423f-9bf9-28953800f981" />
+
