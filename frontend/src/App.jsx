@@ -5,6 +5,7 @@ import './App.css';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
+import HistoricalData from './components/HistoricalData';
 
 function Sidebar() {
   return (
@@ -24,6 +25,12 @@ function Sidebar() {
           <NavLink to="/profile" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <User size={20} />
             Profile
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/history" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+            <Activity size={20} />
+            History
           </NavLink>
         </li>
         <li>
@@ -73,6 +80,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/history" element={<HistoricalData />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings/:tab?" element={<Settings />} />
           </Routes>
