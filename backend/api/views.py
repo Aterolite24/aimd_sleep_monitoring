@@ -47,17 +47,10 @@ class HistoricalHealthDataView(APIView):
                     "avg_movement": record.avg_movement,
                     "min_movement": record.min_movement,
                     "max_movement": record.max_movement,
-                    "sleep_architecture": [
-                        { "time": "10 PM", "stage": random.choice([0, 1]) },
-                        { "time": "11 PM", "stage": random.choice([2, 3]) },
-                        { "time": "12 AM", "stage": random.choice([3, 4]) },
-                        { "time": "1 AM", "stage": random.choice([1, 2]) },
-                        { "time": "2 AM", "stage": random.choice([3, 4]) },
-                        { "time": "3 AM", "stage": random.choice([1, 2]) },
-                        { "time": "4 AM", "stage": random.choice([2, 3]) },
-                        { "time": "5 AM", "stage": random.choice([1, 2]) },
-                        { "time": "6 AM", "stage": 0 }
-                    ]
+                    "sleep_architecture": record.sleep_architecture,
+                    "sleep_score": round(record.sleep_score, 1) if record.sleep_score else None,
+                    "apnea_risk": record.apnea_risk,
+                    "insomnia_risk": record.insomnia_risk
                 }
             except DailyHealthRecord.DoesNotExist:
                 return Response({"error": "No data found for this date."}, status=404)

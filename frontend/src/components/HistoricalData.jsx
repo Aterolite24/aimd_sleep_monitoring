@@ -62,6 +62,34 @@ const HistoricalData = () => {
 
             {!loading && historicalData && (
                 <>
+                    {/* ML Score and Diagnostics */}
+                    <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
+                        {historicalData.sleep_score && (
+                            <div className="card score-card" style={{ flex: '1', minWidth: '200px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                                <h3 className="card-title" style={{ color: '#166534' }}>Sleep Quality Score</h3>
+                                <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#15803d', marginTop: '10px' }}>
+                                    {historicalData.sleep_score.toFixed(1)} / 100
+                                </div>
+                            </div>
+                        )}
+                        {historicalData.apnea_risk !== null && (
+                            <div className="card score-card" style={{ flex: '1', minWidth: '200px', backgroundColor: historicalData.apnea_risk ? '#fef2f2' : '#f0fdf4', border: '1px solid ' + (historicalData.apnea_risk ? '#fecaca' : '#bbf7d0') }}>
+                                <h3 className="card-title" style={{ color: historicalData.apnea_risk ? '#991b1b' : '#166534' }}>Apnea Detection</h3>
+                                <div style={{ fontSize: '18px', fontWeight: 'bold', color: historicalData.apnea_risk ? '#b91c1c' : '#15803d', marginTop: '10px' }}>
+                                    {historicalData.apnea_risk ? '🚨 High Risk Detected' : '✅ Stable - No Risk'}
+                                </div>
+                            </div>
+                        )}
+                        {historicalData.insomnia_risk !== null && (
+                            <div className="card score-card" style={{ flex: '1', minWidth: '200px', backgroundColor: historicalData.insomnia_risk ? '#fef2f2' : '#f0fdf4', border: '1px solid ' + (historicalData.insomnia_risk ? '#fecaca' : '#bbf7d0') }}>
+                                <h3 className="card-title" style={{ color: historicalData.insomnia_risk ? '#991b1b' : '#166534' }}>Insomnia Evaluation</h3>
+                                <div style={{ fontSize: '18px', fontWeight: 'bold', color: historicalData.insomnia_risk ? '#b91c1c' : '#15803d', marginTop: '10px' }}>
+                                    {historicalData.insomnia_risk ? '🚨 High Risk Detected' : '✅ Normal Movement'}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
                     <div className="env-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
 
                         {/* Heart Rate */}

@@ -28,5 +28,18 @@ class DailyHealthRecord(models.Model):
     min_movement = models.FloatField()
     max_movement = models.FloatField()
     
+    sleep_architecture = models.JSONField(null=True, blank=True)
+    
+    # ML Predictors Tracking
+    spo2_drops = models.IntegerField(default=0)
+    pr_spikes = models.IntegerField(default=0)
+    total_movement = models.FloatField(default=0.0)
+    total_duration = models.IntegerField(default=480)
+    
+    # ML Results
+    sleep_score = models.FloatField(null=True, blank=True)
+    apnea_risk = models.BooleanField(null=True, blank=True)
+    insomnia_risk = models.BooleanField(null=True, blank=True)
+    
     def __str__(self):
         return str(self.date)
